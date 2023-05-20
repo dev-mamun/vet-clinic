@@ -8,6 +8,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 <a name="readme-top"></a>
 
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -30,6 +31,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
 - [📝 License](#license)
+
+![Alt text](logo.png)
 
 <!-- PROJECT DESCRIPTION -->
 
