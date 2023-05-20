@@ -28,7 +28,7 @@ ALTER TABLE animals ADD owner_id int REFERENCES owners(id);
 
 CREATE TABLE vets(
     id SERIAL PRIMARY KEY,
-    name varchar,
+    name varchar(255),
     age int,
     date_of_graduation date
 );
