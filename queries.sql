@@ -55,5 +55,5 @@ SELECT AVG(weight_kg) FROM animals;
 SELECT neutered, MAX(escape_attempts) as escape_attempts FROM animals GROUP BY neutered ORDER BY MAX(escape_attempts) DESC;
 SELECT neutered, MAX(weight_kg) as max_weight , MIN(weight_kg) as min_weight FROM animals GROUP BY neutered;
 SELECT species, MAX(weight_kg) as max_weight , MIN(weight_kg) as min_weight FROM animals GROUP BY species;
-SELECT species, AVG(escape_attempts) as avg_escape_attempts FROM animals WHERE date_of_birth >= '1990-01-01' AND  date_of_birth < '2000-01-01' GROUP BY species;
+SELECT species, AVG(escape_attempts) as avg_escape_attempts FROM animals WHERE EXTRACT(YEAR FROM date_of_birth) >= '1990' AND  EXTRACT(YEAR FROM date_of_birth) < '2000' GROUP BY species;
 SELECT neutered, AVG(escape_attempts) as avg_escape_attempts FROM animals WHERE EXTRACT(YEAR FROM date_of_birth) >= '1990' AND  EXTRACT(YEAR FROM date_of_birth) < '2000' GROUP BY neutered;
