@@ -145,19 +145,13 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Abdullah AL mamun**
 
 - GitHub: [@dev-mamun](https://github.com/dev-mamun)
 - Twitter: [@CoderKnight](https://twitter.com/CoderKnight)
 - LinkedIn: [Mamun](https://www.linkedin.com/in/dev-mamun/)
-
-👤 **Matee Safi**
-
-- GitHub: [@matee-safi](https://github.com/matee-safi)
-- Twitter: [@matee-safi](https://twitter.com/matee-safi)
-- LinkedIn: [Matee Safi](https://www.linkedin.com/in/matee-safi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
