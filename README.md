@@ -145,7 +145,7 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Abdullah AL mamun**
 
