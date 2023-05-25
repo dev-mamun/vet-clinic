@@ -159,6 +159,12 @@ Example:
 - Twitter: [@matee-safi](https://twitter.com/matee-safi)
 - LinkedIn: [Matee](https://www.linkedin.com/in/matee-safi/)
 
+👤 **Okpah Igbo**
+
+- GitHub: [@david30-maker](https://github.com/david30-maker)
+- Twitter: [@davidigbo1](https://twitter.com/davidigbo1)
+- LinkedIn: [davidigbo/](https://www.linkedin.com/in/davidigbo/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
