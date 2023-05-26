@@ -114,7 +114,7 @@ SELECT s.name, COUNT(*) as total_visits FROM vets ve
   JOIN species s ON a.species_id = s.id WHERE ve.name ='Maisy Smith' GROUP BY(s.id)
   ORDER BY(total_visits) DESC
   LIMIT 1;
-  
+
   --use of explain analyze
 EXPLAIN  SELECT COUNT(*) FROM visits where animal_id = 4;
 EXPLAIN  SELECT * FROM visits where vet_id = 2;
@@ -141,8 +141,7 @@ CREATE TABLE visits_partitioned (
 CREATE TABLE visits_p1 PARTITION OF visits_partitioned FOR VALUES IN (1);
 CREATE TABLE visits_p2 PARTITION OF visits_partitioned FOR VALUES IN (2);
 --Create a materialized view that computes the result of the query:
-CREATE MATERIALIZED VIEW visits_count_mv AS
-SELECT COUNT(*) FROM visits WHERE animal_id = 4;
+CREATE MATERIALIZED VIEW visits_count_mv AS SELECT COUNT(*) FROM visits WHERE animal_id = 4;
 --Refresh the materialized view periodically to update the result:
 REFRESH MATERIALIZED VIEW visits_count_mv;
 
