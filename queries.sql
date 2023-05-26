@@ -116,33 +116,12 @@ SELECT s.name, COUNT(*) as total_visits FROM vets ve
   LIMIT 1;
 
   --use of explain analyze
-EXPLAIN  SELECT COUNT(*) FROM visits where animal_id = 4;
-EXPLAIN  SELECT * FROM visits where vet_id = 2;
-EXPLAIN  SELECT * FROM owners where email = 'owner_18327@mail.com';
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
 
---Find a way to decrease the execution time of the first query
-CREATE INDEX idx_animal_id ON visits (animal_id);
---Configure the query cache size in your MySQL configuration file:
-query_cache_size = 128M
---Enable the query cache by setting the following parameter to 1:
-query_cache_type = 1
---Add a duplicate animal_id column to the visits table:
-ALTER TABLE visits ADD duplicate_animal_id INT;
---Update the duplicate_animal_id column with the corresponding values from the animal_id column:
-UPDATE visits SET duplicate_animal_id = animal_id;
---Index the new column for faster retrieval:
-CREATE INDEX idx_duplicate_animal_id ON visits (duplicate_animal_id);
---Create a partitioned table for the visits table:
-CREATE TABLE visits_partitioned (
-    animal_id INT,
-    -- Other columns
-) PARTITION BY LIST (animal_id);
---Create individual partitions for each animal_id value:
-CREATE TABLE visits_p1 PARTITION OF visits_partitioned FOR VALUES IN (1);
-CREATE TABLE visits_p2 PARTITION OF visits_partitioned FOR VALUES IN (2);
---Create a materialized view that computes the result of the query:
-CREATE MATERIALIZED VIEW visits_count_mv AS SELECT COUNT(*) FROM visits WHERE animal_id = 4;
---Refresh the materialized view periodically to update the result:
-REFRESH MATERIALIZED VIEW visits_count_mv;
+CREATE INDEX animal_id_index ON visits (animal_id);
+CREATE INDEX vet_id_index ON visits (vet_id);
+CREATE INDEX email_index ON owners (email);
 
 
